@@ -9,7 +9,7 @@ router.post("/", async (req, res) => {
     const connection = await connect();
     const [rows] = await connection.query(
       "INSERT INTO employees (id, first_name, last_name, email, phone_number, job_title, department, salary, hire_date, termination_date) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
-      [req.body.first_name, req.body.last_name, req.body.email, req.body.phone_number, req.body.job_title, req.body.department, req.body.salary, req.body.hire_date, req.body.termination_date]
+      [req.body.first_name, req.body.last_name, req.body.email, req.body.phone_number, req.body.job_title, req.body.department, req.body.salary, req.body.hire_date, req.body.termination_date, req.body.id ]
     );
     res.json({
       id: rows.insertId,
@@ -19,3 +19,5 @@ router.post("/", async (req, res) => {
     console.log(error);
   }
 });
+
+export default router;

@@ -17,7 +17,7 @@ router.get('/', async (req, res) => {
 router.get('/:id', async (req, res) => {
     try {
         const connection = await connect();
-        const [rows] = await connection.query('SELECT * FROM users WHERE id = ?', [req.params.id]);
+        const [rows] = await connection.query('SELECT * FROM employees WHERE id = ?', [req.params.id]);
         res.json(rows);
     } catch (error) {
         console.log(error);

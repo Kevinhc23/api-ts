@@ -51,5 +51,5 @@ Para el uso de la API REST, se debe tener en cuenta lo siguiente:
 ## Licencia
 
 [MIT](https://choosealicense.com/licenses/mit/)
-```
+
 
